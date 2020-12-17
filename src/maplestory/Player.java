@@ -61,31 +61,31 @@ public class Player extends JLabel {
    }
 
    public void healing() {
-      new Thread(new Runnable() {
-
-         @Override
-         public void run() {
-            try {
-               while (true) {
-                  Thread.sleep(5000);
-                  if (player.hp < 100) {
-                     player.hp = player.hp + 5;
-                     if (player.hp >= 100) {
-                        player.hp = 100;
-                     }
-                  }
-                  if (player.mp < 50) {
-                     player.mp = player.mp + 3;
-                     if (player.mp >= 50) {
-                        player.mp = 50;
-                     }
-                  }
-               }
-            } catch (InterruptedException e) {
-               e.printStackTrace();
-            }
-         }
-      }).start();
+//      new Thread(new Runnable() {
+//
+//         @Override
+//         public void run() {
+//            try {
+//               while (true) {
+//                  Thread.sleep(5000);
+//                  if (player.hp < 100) {
+//                     player.hp = player.hp + 5;
+//                     if (player.hp >= 100) {
+//                        player.hp = 100;
+//                     }
+//                  }
+//                  if (player.mp < 50) {
+//                     player.mp = player.mp + 3;
+//                     if (player.mp >= 50) {
+//                        player.mp = 50;
+//                     }
+//                  }
+//               }
+//            } catch (InterruptedException e) {
+//               e.printStackTrace();
+//            }
+//         }
+//      }).start();
    }
 
    public void moveRangeR() { // 오른쪽으로 움직일 때 조건
